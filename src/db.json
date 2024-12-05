@@ -1,0 +1,116 @@
+{
+    "pens": [
+      {
+        "id": "0", 
+        "name": "Tombow Fudenosuke, Hard Tip", 
+        "set_id": "0",
+        "brand_id": "0", 
+        "tip_id": "2", 
+        "category_id": "0", 
+        "color": "Black", 
+        "img_url": "https://d1v72txp4rf8db.cloudfront.net/media/catalog/product/cache/60c659ff331e2b48b782749128dc0f61/t/o/tom_56583_743_1_1_2.jpg",
+        "url": "https://www.tombowusa.com/fudenosuke-brush-pen-fine-tip-black.html",
+        "retail_price_USA": "$4.99", 
+        "date_purchased": "02-02-2024"
+      }, 
+      {
+        "id": "1",
+        "name": "Tombow Dual Brush Pen",
+        "set_id": "1",
+        "tip_id": "3", 
+        "category_id": "4", 
+        "color": "126 Light Olive", 
+        "img_url": "https://d1v72txp4rf8db.cloudfront.net/media/catalog/product/cache/60c659ff331e2b48b782749128dc0f61/t/o/tom_82038_2_3.jpg",
+        "url": "https://www.tombowusa.com/dual-brush-pen.html",
+        "retail_price_USA": "$3.45", 
+        "date_purchased": "02-02-2024"
+      }
+    ],
+    "favorites":[
+      {
+        "pen_id": "0"
+      }, 
+      {
+        "pen_id": "1"
+      }
+    ], 
+    "pen_sets": [
+        {
+            "id": 0,
+            "name": "Fudenosuke",
+            "brand_id": "0"
+        },
+        {
+            "id": 1,
+            "name": "Pigma Micron",
+            "brand_id": "2"
+        },
+        {
+            "id": 2,
+            "name": "Mitsubishi",
+            "brand_id": "1"
+        }
+    ],
+    "tips": [
+        {
+            "id": "0",
+            "name": "Bullet"
+        },
+        {
+            "id": "1",
+            "name": "Chisel"
+        },
+        {
+            "id": "2", 
+            "name": "Flexible nib"
+        }, 
+        {
+            "id": "3",
+            "name": "Brush"
+        }
+    ],
+    "categories": [
+      {
+        "id": "0",
+        "name": "Ballpoint Pen"
+      },
+      {
+        "id": "1",
+        "name": "Fountain Pen"
+      },
+      {
+        "id": "2",
+        "name": "Ink Liner"
+      },
+      {
+        "id": "4",
+        "name": "Brush Pen"
+      },
+      {
+        "id": "5",
+        "name": "Gel Pen"
+      }
+    ],
+    "brands": [
+      {
+        "id": "0",
+        "name": "Tombow",
+        "website": "https://www.tombowusa.com/"
+      },
+      {
+        "id": "1",
+        "name": "Uniball",
+        "website": "https://www.unibrands.co/"
+      },
+      {
+        "id": "2",
+        "name": "Sakura",
+        "website": "https://www.sakuraofamerica.com/"
+      },
+      {
+        "id": "3",
+        "name": "Zebra",
+        "website": "https://www.zebrapen.com/"
+      }
+    ]
+  }
