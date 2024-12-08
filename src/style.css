@@ -1,0 +1,80 @@
+body {
+    background-color: #F9F7F1;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 0;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 0;
+}
+
+p {
+    font-size: 12px;
+    line-height: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+    padding: 80px; 
+    font-family: sans-serif; 
+}
+
+.pens{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    position: fixed;
+    padding: 40px 80px 40px 80px;
+    right: 0px;
+    top: 0px;
+    justify-content: right;
+
+    /* background-color: aqua; */
+}
+
+.navtext{
+    font-size: 12px;
+    text-decoration: none;
+    color: black;
+}
+
+.penImg{
+    height: 70vh;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+.penIndividual{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    
+    /* background-color: white; */
+}
+
+.penIndividualDesc{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
