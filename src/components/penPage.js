@@ -7,46 +7,23 @@ import {toast, ToastContainer} from "react-toastify";
 // icons 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faHeart } from "@fortawesome/free-solid-svg-icons";
-import PenPage from "../components/penPage";
 
-export default function Pen(){
-    const {pen, favorites} = useLoaderData();
-    console.log(pen)
-    console.log(favorites)
-   
-    const [favorite, setFavorite] = useState(
-        favorites.map(fav => fav.penId).includes(pen.id)
-    );
-    
-    useEffect(() => {
-        document.title = `Pen Detail: ${pen.name}`;  
-    }, []);
-    
-    return <div className="body">
-        <Link to={`/`}>Back</Link> 
-        <PenPage
-            img={pen.img_name}
-            name={pen.name}
-            penId={pen.id}
-            retail_price_USA={pen.retail_price_USA}
-            brand={pen.brand.name}
-            category={pen.category.name}
-            color={pen.color}
-            tip={pen.tip.name}
-            favorite={favorite}
-            setFavorite={(favorite) => {
-                setFavorite(favorite);
-            }}
-            renderHeart={(favorite) => {
-                return <FontAwesomeIcon 
-                    icon={faHeart} 
-                    color={favorite ? "red" : "#E2E1DD"} 
-                    size="2x" 
-                />
-            }}
-        ></PenPage>
-        {/* <div className="penIndividual">
-            <img className="penImg" src={process.env.PUBLIC_URL + '/images/' + pen.img_name}></img>
+/* Expected props
+    img
+    penId
+    setFavorite
+    retail_price_USA
+    brand
+    category
+    tip
+ */
+
+export default function PenPage(props){
+    const favorite = props.favorite;
+
+    return(
+        <div className="penIndividual">
+            <img className="penImg" src={process.env.PUBLIC_URL + '/images/' + props.img}></img>
             <div className="penIndividualDesc">
                 <div className="descTop">
                     <button 
@@ -54,15 +31,15 @@ export default function Pen(){
                         type="button"
                         onClick={() => {
                             const updatedFavorite = !favorite; 
-
-                            setFavorite(updatedFavorite);
+                            
+                            {props.setFavorite(updatedFavorite)};
 
                             // if adding a favorite
                             if(updatedFavorite){ 
                                 fetch(`/favorites`, {
                                     method: "POST",
                                     body: JSON.stringify({
-                                        penId: pen.id
+                                        penId: props.penId
                                     }),
                                     headers: {
                                         "Content-type": "application/json",
@@ -72,13 +49,13 @@ export default function Pen(){
                                 }).then((json) => {
                                     toast.success("Added to favorites!");
                                 }).catch((e) => {
-                                    setFavorite(!updatedFavorite);
+                                    {props.setFavorite(updatedFavorite)};
                                     toast.error("Oops, something went wrong.");
                                 });
                             } 
                             // if removing a favorite
                             else {
-                                fetch(`/favorites?penId=${pen.id}`)
+                                fetch(`/favorites?penId=${props.penId}`)
                                 .then(response => response.json())
                                 .then(favorites => {
                                     if (favorites.length > 0) {
@@ -91,34 +68,30 @@ export default function Pen(){
                                     toast.success("Removed from favorites!");
                                 })
                                 .catch((e) => {
-                                    setFavorite(!updatedFavorite);
+                                    {props.setFavorite(updatedFavorite)};
                                     toast.error("Oops, something went wrong.");
                                 });
                             }
                         }}
                     >
-                        <FontAwesomeIcon 
-                            icon={faHeart} 
-                            color={favorite ? "red" : "#E2E1DD"} 
-                            size="2x" 
-                        />
+                        {props.renderHeart(favorite)}
                     </button>
 
-                    <h1 data-testid="name">{pen.name}</h1>
-                    {pen.retail_price_USA && <h2>{pen.retail_price_USA}</h2>}
+                    <h1 data-testid="name">{props.name}</h1>
+                    {props.retail_price_USA && <h2>{props.retail_price_USA}</h2>}
                     
-                    <h2>{pen.brand.name}</h2>
+                    <h2 data-testid="brand">{props.brand}</h2>
                     <div className="hflex">
-                        <div className="tag"><p>{pen.category.name}</p></div>
-                        <div className="tag"><p>{pen.color}</p></div>
-                        <div className="tag"><p>{pen.tip.name}</p></div>
+                        <div className="tag"><p>{props.category}</p></div>
+                        <div className="tag"><p>{props.color}</p></div>
+                        <div className="tag"><p>{props.tip}</p></div>
                     </div>
                 </div>
                 
                 <div className="hflex">
-                    <Link className="actionButton" to={`/editpen/${pen.id}`}>Edit</Link> 
+                    <Link className="actionButton" to={`/editpen/${props.penId}`}>Edit</Link> 
                     <button className="actionButton" onClick={()=>{
-                        fetch(`/pens/${pen.id}?_expand=brand&_expand=category&_expand=tip`, {
+                        fetch(`/pens/${props.penId}?_expand=brand&_expand=category&_expand=tip`, {
                             method: "DELETE"
                         }).then((response)=>{
                             toast.success("Saved!");
@@ -127,9 +100,6 @@ export default function Pen(){
                 </div>
                 
             </div>
-        </div>    */}
-
-        <ToastContainer />
-
-    </div>
-}
+        </div> 
+    )
+}   
