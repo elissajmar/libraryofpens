@@ -77,4 +77,55 @@ form {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    justify-content: space-between;
+    height: 60vh;
+}
+
+.descTop{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+.favorite {
+    width: fit-content;
+    background: none;
+    background-color: none;
+    border: none;
+}
+
+.hflex {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.tag {
+    padding: 4px 12px 4px 12px;
+    background-color: none;
+    border: 1px solid #B0B0B0;
+    color: #B0B0B0;
+    border-radius: 20px;
+}
+
+.actionButton{
+    padding: 8px;
+    width:fit-content;
+    background: none;
+    background-color: black;
+    border: 1px solid black;
+    font-size: 12px;
+    text-decoration: none;
+    color: white;
+}
+
+.actionButton:hover{
+    color: black;
+    background-color: lightgray;
 }

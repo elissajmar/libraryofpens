@@ -23,14 +23,24 @@
       "img_name": "TombowFudeBrush.jpg",
       "url": "https://www.tombowusa.com/dual-brush-pen.html",
       "retail_price_USA": "$3.45"
+    },
+    {
+      "name": "Elissa",
+      "setId": "0",
+      "brandId": "2",
+      "tipId": "1",
+      "categoryId": "1",
+      "color": "Red",
+      "url": "https://twitter.com/erastudio__",
+      "price": "$10.00",
+      "img_name": "DefaultPen.jpg",
+      "id": "cgFJKSy"
     }
   ],
   "favorites": [
     {
+      "id": "0",
       "penId": "0"
-    },
-    {
-      "penId": "1"
     }
   ],
   "sets": [

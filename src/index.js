@@ -76,18 +76,28 @@ const router = createBrowserRouter([
       }, 
       {
         path: "/favorites",
-        element: <Favorites />
+        element: <Favorites />,
+        loader(){
+          return fetch("/favorites?_expand=pen").then((response) => {
+            return response.json();
+          });
+        }
       },
       {
         path:"/pens/:penId", // :postd = dynamic segment
         element: <Pen />,
+        
         loader({params}){ 
-          return fetch(
-            `/pens/${params.penId}?_expand=brand&_expand=category&_expand=tip`
+          return Promise.all([
+              fetch(`/pens/${params.penId}?_expand=brand&_expand=category&_expand=tip`),
+              fetch('/favorites')
+          ])
+          .then(([penResponse, favoritesResponse]) => 
+              Promise.all([penResponse.json(), favoritesResponse.json()])
           )
-          .then((response)=>{
-            return response.json();
-          }); 
+          .then(([pen, favorites]) => {
+              return { pen, favorites };
+          });
         }
       },
       {

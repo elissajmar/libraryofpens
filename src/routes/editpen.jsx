@@ -16,6 +16,29 @@ export default function EditPen(){
     const [name, setName] = useState(pen.name); 
     const [color, setColor] = useState(pen.color); 
 
+    // For validation
+    const [errors, setErrors] = useState({
+        name: "",
+        color: "",
+    });
+
+    const validateForm = () => {
+        const newErrors = {};
+        
+        // Make sure name is not empty
+        if (!name.trim()) {
+            newErrors.name = "Name is required";
+        }
+
+        // Make sure price is not empty
+        if (!color) {
+            newErrors.color = "Color is required";
+        }
+
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
+
     return <div className="body">
         <Link to={`/pens/${pen.id}`}>Back</Link> 
 
@@ -23,21 +46,24 @@ export default function EditPen(){
         
         <form onSubmit={(event) => {
             event.preventDefault(); //prevent form submissions
-            
-            fetch(`/pens/${pen.id}?_expand=brand&_expand=category&_expand=tip`, {
-                method: "PATCH",
-                body: JSON.stringify({
-                  name: name,
-                  color: color
-                }),
-                headers: {
-                  "Content-type": "application/json",
-                },
-              }).then((response)=>{
-                return response.json();
-              }).then((json) => {
-                toast.success("Saved!");
-              });
+            if(validateForm()){
+                fetch(`/pens/${pen.id}?_expand=brand&_expand=category&_expand=tip`, {
+                    method: "PATCH",
+                    body: JSON.stringify({
+                      name: name,
+                      color: color
+                    }),
+                    headers: {
+                      "Content-type": "application/json",
+                    },
+                  }).then((response)=>{
+                    return response.json();
+                  }).then((json) => {
+                    toast.success("Saved!");
+                  });
+            } else {
+                toast.error("Form has not been filled out correctly.");
+            }
         }}> 
             
             <TextInput 
@@ -46,8 +72,10 @@ export default function EditPen(){
                 value={name}
                 onChange={(updatedName) => {
                     setName(updatedName);
+                    setErrors({...errors, name: ""});
                 }}
             />
+            {errors.name && <div className="error-message">{errors.name}</div>}
 
             <TextInput 
                 id="color" 
@@ -55,8 +83,11 @@ export default function EditPen(){
                 value={color}
                 onChange={(updatedColor) => {
                     setColor(updatedColor);
+                    setErrors({...errors, color: ""});
                 }}
             />
+            {errors.color && <div className="error-message">{errors.color}</div>}
+
 
             <button type="submit">
                 Submit
