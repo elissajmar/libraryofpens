@@ -2,13 +2,13 @@
   "pens": [
     {
       "id": "0",
-      "name": "Tombow Fudenosuke, Hard Tip",
+      "name": "Fudenosuke Brush Pen, Soft Tip",
       "setId": "0",
       "brandId": "0",
       "tipId": "2",
       "categoryId": "0",
       "color": "Red",
-      "img_name": "CopicCiao.jpg",
+      "img_name": "TombowFudeSoft.jpg",
       "url": "https://www.tombowusa.com/fudenosuke-brush-pen-fine-tip-black.html",
       "retail_price_USA": "$4.99"
     },
@@ -20,27 +20,123 @@
       "tipId": "3",
       "categoryId": "4",
       "color": "126 Light Olive",
-      "img_name": "TombowFudeBrush.jpg",
+      "img_name": "TombowDualBrush.jpg",
       "url": "https://www.tombowusa.com/dual-brush-pen.html",
       "retail_price_USA": "$3.45"
     },
     {
-      "name": "Elissa",
+      "name": "Smooth Gel Ink Knock Type Ballpoint Pen 0.3mm",
+      "setId": "5",
+      "brandId": "5",
+      "tipId": "0",
+      "categoryId": "0",
+      "color": "Black",
+      "url": "https://www.muji.us/collections/pen-pencils/products/smooth-gel-ink-knock-type-ballpoint-pen-0-3mm",
+      "price": "$1.90",
+      "img_name": "MujiGel.jpg",
+      "id": "HpP2-Kx"
+    },
+    {
+      "name": "Wooden Hex Mechanical Pencil 0.5mm",
+      "setId": "5",
+      "brandId": "5",
+      "tipId": "0",
+      "categoryId": "6",
+      "color": "Natural",
+      "url": "https://www.muji.us/collections/pen-pencils/products/wooden-hex-mechanical-pencil-0-5mm-e9s1",
+      "price": "$7.90",
+      "img_name": "MujiWoodPencil.jpg",
+      "id": "wByafkz"
+    },
+    {
+      "name": "Copic Sketch",
+      "setId": "4",
+      "brandId": "4",
+      "tipId": "3",
+      "categoryId": "4",
+      "color": "Cool Gray C2",
+      "url": "https://www.dickblick.com/items/copic-sketch-marker-cool-gray-c-2/",
+      "price": "$5.85",
+      "img_name": "CopicSketch.jpg",
+      "id": "cDoj0aj"
+    },
+    {
+      "name": "Zebra Mildliner Double Ended Brush Pen - Gray",
+      "setId": "5",
+      "brandId": "3",
+      "tipId": "3",
+      "categoryId": "4",
+      "color": "Gray",
+      "url": "https://www.dickblick.com/items/zebra-mildliner-double-ended-brush-pen-gray/",
+      "price": "$1.70",
+      "img_name": "ZebraMildliner.jpg",
+      "id": "JbdxpdR"
+    },
+    {
+      "name": "Fudenosuke Brush Pen, Hard Tip",
       "setId": "0",
-      "brandId": "2",
-      "tipId": "1",
-      "categoryId": "1",
+      "brandId": "0",
+      "tipId": "2",
+      "categoryId": "4",
+      "color": " Black",
+      "url": "https://www.tombowusa.com/fudenosuke-brush-pen-fine-tip-black.html",
+      "price": "$3.79",
+      "img_name": "TombowFudeHard.jpg",
+      "id": "8C0pOp2"
+    },
+    {
+      "name": "Oil Ink Polycarbonate Ballpoint Pen 0.7mm",
+      "setId": "6",
+      "brandId": "5",
+      "tipId": "0",
+      "categoryId": "0",
       "color": "Red",
-      "url": "https://twitter.com/erastudio__",
-      "price": "$10.00",
-      "img_name": "DefaultPen.jpg",
-      "id": "cgFJKSy"
+      "url": "https://www.muji.us/collections/pen-pencils/products/oil-ink-polycarbonate-ballpoint-pen-0-7mm-s444",
+      "price": "Current price$1.90",
+      "img_name": "MujiRedPen.jpg",
+      "id": "_FfnCQq"
+    },
+    {
+      "name": "Low Center Gravity Mechanical Pencil 0.5mm",
+      "setId": "6",
+      "brandId": "5",
+      "tipId": "0",
+      "categoryId": "6",
+      "color": "Silver",
+      "url": "https://www.muji.us/collections/pen-pencils/products/low-center-gravity-mechanical-pencil-0-5mm-s360",
+      "price": "$8.90",
+      "img_name": "MujiMechPencil.jpg",
+      "id": "eIWZJID"
+    },
+    {
+      "name": "Uni-ball One Gel Pen - 0.5 mm",
+      "setId": "2",
+      "brandId": "1",
+      "tipId": "0",
+      "categoryId": "0",
+      "color": "Sesame Gray",
+      "url": "https://www.jetpens.com/Uni-ball-One-Gel-Pen-0.5-mm-Sesame-Gray/pd/35719?gQT=2",
+      "price": "$1.90",
+      "img_name": "UniballOne.jpg",
+      "id": "iieqlW8"
     }
   ],
   "favorites": [
     {
-      "id": "0",
-      "penId": "0"
+      "penId": "1",
+      "id": "lRDd9kA"
+    },
+    {
+      "penId": "JbdxpdR",
+      "id": "74RfYYy"
+    },
+    {
+      "penId": "0",
+      "id": "ShsL_22"
+    },
+    {
+      "penId": "iieqlW8",
+      "id": "gPis0Nh"
     }
   ],
   "sets": [
@@ -58,6 +154,26 @@
       "id": "2",
       "name": "Mitsubishi",
       "brandId": "1"
+    },
+    {
+      "id": "3",
+      "name": "Copic Ciao",
+      "brandId": "4"
+    },
+    {
+      "id": "4",
+      "name": "Copic Sketch",
+      "brandId": "4"
+    },
+    {
+      "id": "5",
+      "name": "Mildliner",
+      "brandId": "4"
+    },
+    {
+      "id": "6",
+      "name": "No Set",
+      "brandId": "0"
     }
   ],
   "tips": [
@@ -98,6 +214,14 @@
     {
       "id": "5",
       "name": "Gel Pen"
+    },
+    {
+      "id": "6",
+      "name": "Mechanical Pencil"
+    },
+    {
+      "id": "7",
+      "name": "Pencil"
     }
   ],
   "brands": [
@@ -120,6 +244,16 @@
       "id": "3",
       "name": "Zebra",
       "website": "https://www.zebrapen.com/"
+    },
+    {
+      "id": "4",
+      "name": "Copic",
+      "website": "https://www.copicmarkers.com/"
+    },
+    {
+      "id": "5",
+      "name": "Muji",
+      "website": "https://https://muji.us/"
     }
   ]
 }

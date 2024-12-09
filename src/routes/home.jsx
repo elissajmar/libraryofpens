@@ -3,6 +3,8 @@ import "../style.css"
 import { useLoaderData } from "react-router-dom";
 
 import { Link } from "react-router-dom";
+import PenCard from "../components/penCard";
+
 
 export default function Home(){
     useEffect(() => {
@@ -13,12 +15,16 @@ export default function Home(){
 
     return (
         <div className="body">
+            <div className="bgText">
+                Your Collection
+            </div>
             <div className="pens">
                 {pens.map((pen) => {
-                    {/* the to='' field has to match the url defined in index.js */}
-                    return <Link to={`/pens/${pen.id}`} key={pen.id}> 
-                        <img className="penImg" src={process.env.PUBLIC_URL + '/images/' + pen.img_name}></img>
-                    </Link>;
+                    return <PenCard
+                        penId = {pen.id}
+                        penImg = {pen.img_name}
+                        src = {process.env.PUBLIC_URL + '/images/' + pen.img_name}
+                    ></PenCard>
                 })}
             </div>
         </div>

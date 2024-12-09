@@ -1,5 +1,12 @@
+@font-face {
+    font-family: 'PP Editorial New';
+    src: url('PPEditorialNew-UltralightItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+}
+
 body {
-    background-color: #F9F7F1;
+    background-color: white;
 }
 
 h1 {
@@ -17,6 +24,29 @@ h2 {
 p {
     font-size: 12px;
     line-height: 0;
+}
+
+.overlay{
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+    z-index: 5;
+    position: fixed;
+    pointer-events: none;
+}
+
+.bgText {
+    position: absolute;
+    top: 15vh;
+    align-self: center;
+    z-index: 5;
+    font-family: PP Editorial New;
+    color: #E9E9E9;
+    font-size: 160px;
+    mix-blend-mode: multiply;
 }
 
 form {
@@ -52,6 +82,7 @@ form {
 }
 
 .navtext{
+    text-align: center;
     font-size: 12px;
     text-decoration: none;
     color: black;
@@ -60,7 +91,7 @@ form {
 .penImg{
     height: 70vh;
     object-fit: contain;
-    mix-blend-mode: multiply;
+    
 }
 
 .penIndividual{
