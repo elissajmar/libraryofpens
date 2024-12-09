@@ -151,17 +151,21 @@ export default function AddPen(){
                 }}
             />
             {errors.color && <div className="error-message">{errors.color}</div>}
-
-
-            <TextInput 
-                id="url" 
-                label="Url" 
-                value={url}
-                onChange={(updatedUrl) => {
-                    setUrl(updatedUrl);
-                }}
-            />
-            {errors.url && <div className="error-message">{errors.url}</div>}
+            
+            <label htmlFor="url">
+                    Url
+                </label>
+            <div>
+                <textarea 
+                    id="url" 
+                    rows="3" 
+                    value={url} 
+                    onChange={(event) => {
+                    const value=event.target.value; setUrl(url);
+                    }}
+                />
+                {errors.url && <div className="error-message">{errors.url}</div>}
+            </div>
 
             <select 
                 value={category} 

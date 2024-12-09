@@ -15,11 +15,14 @@ export default function EditPen(){
 
     const [name, setName] = useState(pen.name); 
     const [color, setColor] = useState(pen.color); 
+    const [isConfirmed, setIsConfirmed] = useState(false);
+
 
     // For validation
     const [errors, setErrors] = useState({
         name: "",
         color: "",
+        check: ""
     });
 
     const validateForm = () => {
@@ -33,6 +36,11 @@ export default function EditPen(){
         // Make sure price is not empty
         if (!color) {
             newErrors.color = "Color is required";
+        }
+
+        // Make sure to confirm
+        if (!isConfirmed) {
+            newErrors.check = "Please confirm";
         }
 
         setErrors(newErrors);
@@ -87,6 +95,23 @@ export default function EditPen(){
                 }}
             />
             {errors.color && <div className="error-message">{errors.color}</div>}
+
+            <div>
+                <input 
+                    className="form-check-input" 
+                    type="checkbox" 
+                    id="confirm" 
+                    checked={isConfirmed}
+                    onChange={(event)=> {
+                        setIsConfirmed(event.target.checked);
+                    }}
+                />
+                <label className="form-check-label" htmlFor="newsletter">
+                    Confirm changes?
+                </label>
+                {errors.check && <div className="error-message">{errors.check}</div>}
+            </div>
+            
 
 
             <button type="submit">
