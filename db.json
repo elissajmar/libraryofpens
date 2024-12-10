@@ -123,24 +123,19 @@
   ],
   "favorites": [
     {
-      "penId": "1",
-      "id": "lRDd9kA"
-    },
-    {
       "penId": "JbdxpdR",
-      "id": "74RfYYy"
+      "dateAdded": "2024-12-10T02:22:59.895Z",
+      "id": 1
     },
     {
-      "penId": "iieqlW8",
-      "id": "gPis0Nh"
+      "penId": "wByafkz",
+      "dateAdded": "2024-12-10T02:23:02.912Z",
+      "id": 2
     },
     {
-      "penId": "_FfnCQq",
-      "id": "3vcgfvn"
-    },
-    {
-      "penId": "0",
-      "id": "zT6doNV"
+      "penId": "eIWZJID",
+      "dateAdded": "2024-12-10T02:23:05.528Z",
+      "id": 3
     }
   ],
   "sets": [

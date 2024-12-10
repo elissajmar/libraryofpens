@@ -94,6 +94,14 @@ form {
     
 }
 
+.penParent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #B0B0B0;
+}
+
 .penIndividual{
     display: flex;
     flex-direction: row;

@@ -39,7 +39,8 @@ export default function PenPage(props){
                                 fetch(`/favorites`, {
                                     method: "POST",
                                     body: JSON.stringify({
-                                        penId: props.penId
+                                        penId: props.penId,
+                                        dateAdded: new Date().toISOString()
                                     }),
                                     headers: {
                                         "Content-type": "application/json",
