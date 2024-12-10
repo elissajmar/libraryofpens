@@ -54,7 +54,7 @@
       "brandId": "4",
       "tipId": "3",
       "categoryId": "4",
-      "color": "Cool Gray C2",
+      "color": "Grey C1",
       "url": "https://www.dickblick.com/items/copic-sketch-marker-cool-gray-c-2/",
       "price": "$5.85",
       "img_name": "CopicSketch.jpg",
@@ -136,6 +136,11 @@
       "penId": "eIWZJID",
       "dateAdded": "2024-12-10T02:23:05.528Z",
       "id": 3
+    },
+    {
+      "penId": "1",
+      "dateAdded": "2024-12-10T02:41:38.959Z",
+      "id": 4
     }
   ],
   "sets": [

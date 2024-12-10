@@ -161,7 +161,8 @@ export default function AddPen(){
                     rows="3" 
                     value={url} 
                     onChange={(event) => {
-                    const value=event.target.value; setUrl(url);
+                        const value=event.target.value; 
+                        setUrl(value);
                     }}
                 />
                 {errors.url && <div className="error-message">{errors.url}</div>}
